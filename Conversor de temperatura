@@ -1,0 +1,63 @@
+public class Prj {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		double num1, result;
+		char temperature;
+		
+		
+		      System.out.println("what Scale need to do ? " 
+		
+				+"\n1) celsius for kelvin"
+				+"\n2) celsius for fahrenheit"
+				+"\n3) kelvin for celsius "
+				+"\n4) kelvin for fahrenheit"
+				+"\n5) fahrenheit for celsius"
+				+"\n6) fahrenheit for kelvin"
+				);
+			temperature = sc.next( ).charAt(0);
+				
+	System.out.println("type the temperature in number(s): ");
+		num1 = sc.nextDouble();
+
+		
+		switch (temperature) {
+			
+		
+	case '1':
+		result = num1 + 273;
+		break;		
+		
+	case '2':
+		result = (num1-32)/9;
+		break;		
+		
+	case '3':
+		result = num1 - 273;
+			
+		break;		
+		
+	case '4':
+		result = (num1-273)/5	;
+		break;	
+		
+	case '5':
+		result = (num1-32)/9;
+		break;		
+		
+	case '6':
+		result = (num1-273)/5;	
+			
+		break;
+		
+		  default:
+			  System.out.println("temperature invaled");
+			  return;
+		
+		}
+	
+		System.out.println("The converted temperature is: " + result);
+	}
+
+}
